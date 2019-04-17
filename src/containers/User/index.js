@@ -2,10 +2,11 @@ import React, {Component} from "react"
 import config from "../../config"
 import Error from "../../components/Error"
 import Loading from "../../components/Loading"
+import UserPreview from "../../components/UserPreview"
 
 export class User extends Component {
 
-   constructor(props){
+   constructor(props) {
       super(props);
       this.fetchUsers = this.fetchUsers.bind(this)
    }
@@ -32,7 +33,6 @@ export class User extends Component {
             if (response.status === 200) {
                this.setState({loading: false});
                response.text().then((data) => this.setState({data: JSON.parse(data)}));
-               this.setState({data: response})
             } else {
                this.setState({loading: false});
                this.setState({error: response.error})
@@ -45,7 +45,7 @@ export class User extends Component {
    }
 
    render() {
-      const {error, loading} = this.state;
+      const {data, error, loading} = this.state;
       if (error) {
          return <Error error={error}/>
       }
@@ -54,7 +54,10 @@ export class User extends Component {
          return <Loading/>
       }
 
-      return <h1>User</h1>
+      if(data) {
+         return <UserPreview users={data}/>
+      }
+      return null
    }
 }
 
