@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name":"Karim",
+      "company": "just tech",
+      "email": "karim.beiranvand@justtech.com",
+      "address": "Norrbyvägen 30, 168 69 Stockholm"
+    },
+    {
+      "id": 2,
+      "name":"Saeed",
+      "company": "just tech",
+      "email": "saeed.zarinfam@justtech.com",
+      "address": "Norrbyvägen 30, 168 69 Stockholm"
+    },
+    {
+      "id": 3,
+      "name":"Ehsan",
+      "company": "just tech",
+      "email": "ehsan.salari@justtech.com",
+      "address": "Norrbyvägen 30, 168 69 Stockholm"
+    },
+    {
+      "id": 4,
+      "name":"Mostafa",
+      "company": "just tech",
+      "email": "mostafa.moradian@justtech.com",
+      "address": "Norrbyvägen 30, 168 69 Stockholm"
+    }
+  ]
+}
